@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPT-2 Web App</title>
+</head>
+<body>
+    <h1>GPT-2 Web App</h1>
+    <form action="/generate" method="post">
+        <label for="prompt">Enter a prompt:</label><br>
+        <textarea id="prompt" name="prompt" rows="4" cols="50">{{ prompt }}</textarea><br>
+        <input type="submit" value="Generate">
+    </form>
+    {% if response %}
+        <h2>Generated Text:</h2>
+        <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>
